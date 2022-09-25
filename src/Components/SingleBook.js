@@ -1,6 +1,8 @@
 const SingleBook = ({singleBook, changeReadingStatus})=>{
-    if(singleBook.imageLinks.thumbnail.length === 0){
+    if(!singleBook.imageLinks){
+        singleBook.imageLinks = [];
         singleBook.imageLinks.thumbnail = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png";
+        // console.log('no image found', singleBook);
     }
 
     return(
